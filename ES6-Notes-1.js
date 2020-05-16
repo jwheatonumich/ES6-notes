@@ -27,3 +27,27 @@ const VARRAY = [1,5,3]; //This will now work
 //Object.freeze() prevents mutation
 Object.freeze(VARRAY);
 VARRAY[1]=100; //This will no longer work
+
+//The following functions are equivalent
+const myFunc = function() { 
+  const myVar = "value"; 
+  return myVar;
+  }
+  
+//Unnamed function since it gets passed into a variable
+const myFunc = () => { 
+const myVar = "value"; 
+return myVar;
+}
+  
+//Below we can omit the "return" and {} since the function just returns a value
+const myFunc = () => "value";
+  
+//Arrow functions with one input can be written without ()
+const doubler = item => item * 2;
+  
+//Arrow functions can use multiple inputs, but they require ()
+const multiplier = (item, multi) => item * multi;
+  
+//Functions can have default parameters
+const greeting = (name = "Anonymous") => "Hello " + name;
