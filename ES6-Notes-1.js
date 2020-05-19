@@ -51,3 +51,15 @@ const multiplier = (item, multi) => item * multi;
   
 //Functions can have default parameters
 const greeting = (name = "Anonymous") => "Hello " + name;
+
+//"..." can be used to allow a flexible number of entries into a function.
+//The below function sumns any number of values that get input
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0); //Reduce applies a function to all values in an array, in this case adding them
+}
+
+//Apply makes an array act like a comma seperated list of values
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); // Inputs the array as though it were (6, 89, 3, 45)
+//... can be used in ES6 to do the same thing and is easier to read
+const maximus = Math.max(...arr);
