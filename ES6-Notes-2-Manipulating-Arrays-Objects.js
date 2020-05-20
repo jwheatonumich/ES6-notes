@@ -38,3 +38,9 @@ let a = 8, b = 6;
 
 //Using destructuring and ... to assign the first 2 values to variables and the rest to another array
 const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+
+//Function that uses two of the values in an object
+const stats = {max: 56.78, standard_deviation: 4.34, median: 34.54, mode: 23.87, min: -0.75, average: 35.85};
+const half = ({max,min}) => {
+  return(max + min) / 2.0
+  }; 
