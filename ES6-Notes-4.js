@@ -27,3 +27,6 @@ export default function add(x, y) { //Exports the add function if none is specif
 export default function(x, y) { //Exports an unnamed function if none is specified
     return x + y;
   }
+
+//When we import the default function, we only need to provide a name, not define which function to import
+import add from "./math_functions.js"; //add could be any  name
