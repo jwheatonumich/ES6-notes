@@ -30,3 +30,23 @@ export default function(x, y) { //Exports an unnamed function if none is specifi
 
 //When we import the default function, we only need to provide a name, not define which function to import
 import add from "./math_functions.js"; //add could be any  name
+
+//A promise checks if a condition is true
+const makeServerRequest = new Promise((resolve, reject) => {
+    
+    let responseFromServer = false;// Simulates a failure
+      
+    if(responseFromServer) {
+      resolve("We got the data");
+    } else {  
+      reject("Data not received");
+    }
+  });
+  
+  makeServerRequest.then(result => { //Waits for a response, then prints the result to console
+    console.log(result);
+  });
+  
+  makeServerRequest.catch(error => { //Catches and outputs errors
+    console.log(error);
+  });
